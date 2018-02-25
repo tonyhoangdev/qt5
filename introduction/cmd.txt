@@ -1,0 +1,13 @@
+refs: http://zetcode.com/gui/qt5/
+
+-- shortest
+g++ version.cpp -o version -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib
+g++ simple.cpp -o simple -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtGui -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtWidgets -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -lQt5Gui -lQt5Widgets -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib 
+
+-- option: -lGL -lpthread
+g++ version.cpp -o version -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lGL -lpthread
+g++ simple.cpp -o simple -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtGui -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtWidgets -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -lQt5Gui -lQt5Widgets -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lGL -lpthread
+
+-- qmake
+g++ -c -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I. -I../../../Qt5.10.0/5.10.0/gcc_64/include -I../../../Qt5.10.0/5.10.0/gcc_64/include/QtWidgets -I../../../Qt5.10.0/5.10.0/gcc_64/include/QtGui -I../../../Qt5.10.0/5.10.0/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I../../../Qt5.10.0/5.10.0/gcc_64/mkspecs/linux-g++ -o simple.o simple.cpp
+g++ -Wl,-O1 -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -o introduction simple.o   -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread
