@@ -3,6 +3,8 @@ refs: http://zetcode.com/gui/qt5/
 -- deploy app window: https://stackoverflow.com/questions/22185974/deploying-qt-5-app-on-windows
 <qt path>\<version>\bin\windeployqt.exe "path_exe"
 
+<qt path>\<version>\qml\
+
 -- shortest
 g++ version.cpp -o version -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib
 g++ simple.cpp -o simple -fPIC -std=gnu++11 -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtCore -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtGui -I/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/include/QtWidgets -L/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib -lQt5Core -lQt5Gui -lQt5Widgets -Wl,-rpath,/home/tonyhoang/Qt5.10.0/5.10.0/gcc_64/lib
